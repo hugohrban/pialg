@@ -1,7 +1,7 @@
 numpy
 pandas
 matplotlib
-gym
+gymnasium
 deap
 pydot
 graphviz
