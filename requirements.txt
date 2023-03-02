@@ -5,10 +5,10 @@ gym
 deap
 pydot
 graphviz
-tensorlflow
+# tensorlflow-macos
 scikit-learn
 keras
-pickle
+# pickle
 cellpylib
 pyseagull
 pygame
