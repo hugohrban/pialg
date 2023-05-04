@@ -114,7 +114,8 @@ def ant_solver(vertices, distance, capacity, ants=10, max_iterations=3000, alpha
         
         best_sol_progress.append(best_fitness)
         
-        print(f'{i:4}, {np.min(fits):.4f}, {np.mean(fits):.4f}, {np.max(fits):.4f}')
+        # print(f'{i:4}, {np.min(fits):.4f}, {np.mean(fits):.4f}, {np.max(fits):.4f}')
+        print(f"iteration {i} / {max_iterations}, best fitness: {best_fitness}", end="\r")
     return best_solution, pheromones, best_sol_progress
 
 
@@ -124,10 +125,10 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--size", help="size of the problem", default=32,)
 parser.add_argument("--ants", help="number of ants", default=10, type=int)
 parser.add_argument("--iterations", help="number of iterations", default=100, type=int)
-parser.add_argument("--alpha", help="alpha", default=1)
-parser.add_argument("--beta", help="beta", default=3)
+parser.add_argument("--alpha", help="alpha", default=1, type=int)
+parser.add_argument("--beta", help="beta", default=3, type=int)
 parser.add_argument("--Q", help="Q", default=100)
-parser.add_argument("--rho", help="rho", default=0.8)
+parser.add_argument("--rho", help="rho", default=0.8, type=float)
 args = parser.parse_args()
 
 def main():
